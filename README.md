@@ -1,43 +1,52 @@
-# 🪴 PlantoPlan - Smart Plant Scheduler
+# ✅ API Testing & Coverage Report
 
-**PlantoPlan** is a full-stack application that helps users track their plants, with details like species, location, notes, and upcoming watering dates.
+As part of **Keploy's API Fellowship Session 3**, I implemented comprehensive testing for the backend API of the **PlantoPlan** application using **Jest** and **Supertest**.
+
+### 🧪 What I Tested
+
+| Type of Test     | Details |
+|------------------|---------|
+| ✅ **Unit Tests** | Tested utility logic like `isWateringDue(date)` from `utils.js`. |
+| ✅ **Integration Tests** | Tested CRUD operations with PostgreSQL via routes (`GET /plants`, `POST /plants`). |
+| ✅ **API Tests** | Ensured endpoints behave as expected using `supertest`. |
+
+### 🧰 Tech Stack & Tools
+
+- **Framework:** Node.js + Express
+- **Database:** PostgreSQL
+- **Testing:** [Jest](https://jestjs.io/), [Supertest](https://github.com/visionmedia/supertest)
+
+### 📁 Test Structure
+
+```
+backend/
+├── __test__/
+│   ├── plants.test.js      # API and integration tests
+│   └── unit.test.js        # Logic/unit tests (e.g., isWateringDue)
+├── utils.js
+├── server.js
+├── db.js
+└── ...
+```
+
+### 📊 Coverage Report (via `npx jest --coverage`)
+
+| Metric       | Value     |
+|--------------|-----------|
+| Statements   | **93.75%** |
+| Branches     | **50%**    |
+| Functions    | **75%**    |
+| Lines        | **93.75%** |
+
+![Coverage Screenshot]("C:\Users\KIIT\Desktop\cov.png") <!-- Replace this with your actual screenshot path -->
 
 ---
 
-## 📦 Tech Stack
+### 🔧 How to Run Tests Locally
 
-- **Backend**: Node.js + Express.js
-- **Database**: PostgreSQL
-- **Frontend**: Vue.js + Axios
-- **Styling**: Tailwind CSS (optional)
-- **Environment**: `.env` for sensitive config
-
----
-
-## 🧠 Features
-
-- Add, view, and list plants with:
-  - Name, species, location, notes
-  - Next watering date
-- Data stored in a PostgreSQL database
-- Custom RESTful API endpoints
-- Frontend fetches and displays plant data dynamically
-
----
-
-## 🔌 API Endpoints
-
-| Method | Endpoint         | Description             |
-|--------|------------------|-------------------------|
-| GET    | `/plants`        | Get all plants          |
-| POST   | `/plants`        | Add a new plant         |
-
-### Sample `POST /plants` Request:
-```json
-{
-  "name": "Money Plant",
-  "species": "Epipremnum aureum",
-  "location": "Living Room",
-  "next_water_date": "2025-06-25",
-  "notes": "Water every 4 days"
-}
+```bash
+cd backend
+npm install
+npm start           # Optional - for manual testing
+npx jest --coverage # To run all tests with coverage report
+```
