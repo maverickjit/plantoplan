@@ -38,7 +38,7 @@ backend/
 | Functions    | **75%**    |
 | Lines        | **93.75%** |
 
-![Coverage Screenshot]("C:\Users\KIIT\Desktop\plantoplan\cov.png") <!-- Replace this with your actual screenshot path -->
+![Coverage Screenshot]("cov.png") <!-- Replace this with your actual screenshot path -->
 
 ---
 
