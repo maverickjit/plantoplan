@@ -23,8 +23,8 @@ This project includes:
 
 Below is a screenshot of the Keploy test reports generated for this API:
 
-![Keploy Test Report](testreport.png)
-[Test Report 2](testdrive.png)
+![Keploy Test Report](testreport.png) [CI&CD Report 2](cicd.png)
+
 <!-- 🔼 Replace ./cov.png with the actual path to your screenshot file -->
 
 ---
