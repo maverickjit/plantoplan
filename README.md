@@ -23,7 +23,7 @@ This project includes:
 
 Below is a screenshot of the Keploy test reports generated for this API:
 
-![Keploy Test Report]()
+![Keploy Test Report](testreport.png)
 <!-- 🔼 Replace ./cov.png with the actual path to your screenshot file -->
 
 ---
