@@ -1,52 +1,47 @@
-# ✅ API Testing & Coverage Report
+# 🌿 PlantoPlan
 
-As part of **Keploy's API Fellowship Session 3**, I implemented comprehensive testing for the backend API of the **PlantoPlan** application using **Jest** and **Supertest**.
+PlantoPlan is a Node.js API for managing plant watering schedules.
 
-### 🧪 What I Tested
-
-| Type of Test     | Details |
-|------------------|---------|
-| ✅ **Unit Tests** | Tested utility logic like `isWateringDue(date)` from `utils.js`. |
-| ✅ **Integration Tests** | Tested CRUD operations with PostgreSQL via routes (`GET /plants`, `POST /plants`). |
-| ✅ **API Tests** | Ensured endpoints behave as expected using `supertest`. |
-
-### 🧰 Tech Stack & Tools
-
-- **Framework:** Node.js + Express
-- **Database:** PostgreSQL
-- **Testing:** [Jest](https://jestjs.io/), [Supertest](https://github.com/visionmedia/supertest)
-
-### 📁 Test Structure
-
-```
-backend/
-├── __test__/
-│   ├── plants.test.js      # API and integration tests
-│   └── unit.test.js        # Logic/unit tests (e.g., isWateringDue)
-├── utils.js
-├── server.js
-├── db.js
-└── ...
-```
-
-### 📊 Coverage Report (via `npx jest --coverage`)
-
-| Metric       | Value     |
-|--------------|-----------|
-| Statements   | **93.75%** |
-| Branches     | **50%**    |
-| Functions    | **75%**    |
-| Lines        | **93.75%** |
-
-![Coverage Screenshot](cov.png) <!-- Replace this with your actual screenshot path -->
+This project includes:
+- Express.js backend
+- PostgreSQL database
+- API testing automation with [Keploy](https://keploy.io)
+- Continuous Integration using GitHub Actions
 
 ---
 
-### 🔧 How to Run Tests Locally
+## 🚀 Features
+
+✅ CRUD operations for plants  
+✅ OpenAPI (Swagger) documentation  
+✅ AI-generated API tests with Keploy  
+✅ CI/CD pipeline for automated test execution
+
+---
+
+## 🧪 Keploy API Test Reports
+
+Below is a screenshot of the Keploy test reports generated for this API:
+
+![Keploy Test Report]()
+<!-- 🔼 Replace ./cov.png with the actual path to your screenshot file -->
+
+---
+
+## ⚙️ CI/CD Pipeline Configuration
+
+This project uses **GitHub Actions** to run Keploy tests automatically on every push to `main`.
+
+You can view the workflow YAML here:
+
+👉 [`.github/workflows/ci.yml`](https://github.com/maverickjit/plantoplan/blob/main/.github/workflows/ci.yml)
+<!-- 🔼 Make sure this URL matches your repository path -->
+
+---
+
+## 🚦 How to Run Locally
+
+1️⃣ Install dependencies:
 
 ```bash
-cd backend
 npm install
-npm start           # Optional - for manual testing
-npx jest --coverage # To run all tests with coverage report
-```
